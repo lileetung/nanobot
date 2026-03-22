@@ -9,8 +9,8 @@
 | 1 | 理解資料流 | `nanobot/channels/slack.py` | ✅ 已完成 | Socket Mode 連線、多層權限策略、thread 級 session 隔離、Markdown→mrkdwn 轉換 |
 | 1 | 理解資料流 | `nanobot/bus/queue.py` | ✅ 已完成 | 雙向 asyncio.Queue 解耦頻道與 Agent，極簡設計只負責傳遞 |
 | 1 | 理解資料流 | `nanobot/agent/loop.py` | ✅ 已完成 | 核心迴圈：run→dispatch→process_message→_run_agent_loop，Task 並發、記憶整合、工具逐一執行 |
-| 2 | Agent 內部機制 | `nanobot/agent/context.py` | ⬜ 未開始 | 提示詞組裝（SOUL + TOOLS + 記憶 + 歷史） |
-| 2 | Agent 內部機制 | `nanobot/agent/memory.py` | ⬜ 未開始 | 記憶的讀寫與整合策略 |
+| 2 | Agent 內部機制 | `nanobot/agent/context.py` | ✅ 已完成 | 分層組裝系統提示詞（Identity→Bootstrap→Memory→Skills），Runtime Context 防注入標記，多模態圖片支援 |
+| 2 | Agent 內部機制 | `nanobot/agent/memory.py` | ✅ 已完成 | 雙層記憶（MEMORY.md 長期 + HISTORY.md 日誌），LLM 驅動的 consolidate 整合，滑動窗口漸進壓縮 |
 | 2 | Agent 內部機制 | `nanobot/agent/tools/base.py` + `registry.py` | ⬜ 未開始 | 工具系統抽象與註冊機制 |
 | 2 | Agent 內部機制 | `nanobot/agent/tools/shell.py` + `filesystem.py` | ⬜ 未開始 | 安全防護、路徑限制 |
 | 2 | Agent 內部機制 | `nanobot/agent/loop.py`（深讀） | ⬜ 未開始 | has_tool_calls 判斷、Function Calling 協定、tools.get_definitions() |
